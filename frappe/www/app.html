@@ -78,6 +78,20 @@
 			<script type="module">
 				import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
 
+				try{
+					let url = "http://localhost:8080/api/method/frappe.auth.get_logged_user";
+					const response = await fetch(url);
+
+					 console.log(JSON.stringify(response));
+					 console.log(response.message);
+					 console.log(response.exc_type);
+					
+				}catch (error) {
+    				console.error(error.message);
+  				}
+				
+				
+				
 				createChat({
 					webhookUrl: 'http://localhost:5678/webhook/4e7a3ce2-8d36-45a9-8870-201c678ffba3/chat',
 					chatSessionKey: 'sessionId',
