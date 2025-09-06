@@ -86,6 +86,7 @@
 
 					 console.log(response_text);
 					 console.log(response_text.message);
+					 let username = response_text.message;
 					 //exc_type
 					
 				}catch (error) {
@@ -94,7 +95,7 @@
 				
 				createChat({
 					webhookUrl: 'http://localhost:5678/webhook/c29d19a3-a5bc-43a0-b309-7dfe56002ebd/chat',
-					chatSessionKey: 'sessionId',
+					chatSessionKey: username,
 					loadPreviousSession: true,
 				});
 			</script>
