@@ -78,6 +78,8 @@
 			<script type="module">
 				import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
 
+				let username =crypto.randomUUID();
+				
 				try{
 					let url = 'http://localhost:8080/api/method/frappe.auth.get_logged_user';
 					const response = await fetch(url);
@@ -86,7 +88,7 @@
 
 					 console.log(response_text);
 					 console.log(response_text.message);
-					 let username = response_text.message;
+					 username = response_text.message;
 					 //exc_type
 					
 				}catch (error) {
