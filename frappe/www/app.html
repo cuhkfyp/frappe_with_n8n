@@ -82,9 +82,11 @@
 					let url = 'http://localhost:8080/api/method/frappe.auth.get_logged_user';
 					const response = await fetch(url);
 
-					 console.log(JSON.stringify(response));
-					 console.log(response.message);
-					 console.log(response.exc_type);
+					 let response_text = await response.json();
+
+					 console.log(response_text);
+					 console.log(response_text.message);
+					 //exc_type
 					
 				}catch (error) {
     				console.error(error.message);
