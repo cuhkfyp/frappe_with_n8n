@@ -77,6 +77,9 @@
 		<link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
 			<script type="module">
 				import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+
+				let username =crypto.randomUUID();
 				
 				try{
 					let url = 'http://localhost:8080/api/method/frappe.auth.get_logged_user';
@@ -87,7 +90,7 @@
 					 console.log(response_text);
 					 console.log(response_text.message);
 					 //exc_type
-					let username = response_text.message;
+					username = response_text.message;
 					
 				}catch (error) {
     				console.error(error.message);
