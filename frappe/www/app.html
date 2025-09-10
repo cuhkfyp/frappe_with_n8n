@@ -90,14 +90,8 @@
 					 console.log(response_text.message);
 
 					  username = response_text.message;
-					 //exc_type
-					
-				}catch (error) {
-    				console.error(error.message);
-  				}
-				
-				
-				
+					 
+
 				createChat({
 					webhookUrl: 'http://localhost:5678/webhook/c29d19a3-a5bc-43a0-b309-7dfe56002ebd/chat',//http://localhost:5678/webhook/c29d19a3-a5bc-43a0-b309-7dfe56002ebd/chat
 					//chatSessionKey: 'username',
@@ -105,7 +99,16 @@
 						username:username
 					},
 					loadPreviousSession: true,
-				});
+				}); 
+					
+				}catch (error) {
+    				console.error(error.message);
+					console.log("something goes wrong")
+  				}
+				
+				
+				
+				
 			</script>
 	</body>
 </html>
