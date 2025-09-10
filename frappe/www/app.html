@@ -79,6 +79,8 @@
 				import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
 
 				let username =crypto.randomUUID();
+
+				async function fetchandmound(){
 				
 				try{
 					let url = 'http://localhost:8080/api/method/frappe.auth.get_logged_user';
@@ -105,7 +107,9 @@
     				console.error(error.message);
 					console.log("something goes wrong")
   				}
-				
+				}
+
+				fetchandmound();				
 				
 				
 				
