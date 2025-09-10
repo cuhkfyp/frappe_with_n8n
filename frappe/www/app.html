@@ -80,7 +80,8 @@
 
 
 				let username =crypto.randomUUID();
-				
+
+				async function fetchandmound(){
 				try{
 					let url = 'http://localhost:8080/api/method/frappe.auth.get_logged_user';
 					const response = await fetch(url);
@@ -104,6 +105,10 @@
     				console.error(error.message);
 					console.log("Something go wrong")
   				}
+
+				}
+
+				fetchandmound();
 			</script>
 	</body>
 </html>
